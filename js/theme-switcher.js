@@ -1,5 +1,5 @@
 const darkTheme = 'theme-dark';
-const lightTheme = 'theme-light'
+const lightTheme = 'theme-light';
 
 localStorage.setItem('theme', 'theme-light');
 
@@ -15,7 +15,6 @@ checkbox.addEventListener('change', function() {
     }
 });
 
-function setTheme(themeName) {
-    
+function setTheme(themeName) { 
     document.documentElement.className = themeName;
 }

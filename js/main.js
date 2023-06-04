@@ -1,4 +1,4 @@
-console.log("You was hacked by гос.деп шша");
+console.log("Congrutulations! You was hacked by гос.деп шша");
 
 const takes = {
     "politician": [
