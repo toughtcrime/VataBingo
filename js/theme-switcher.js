@@ -2,6 +2,8 @@ const darkTheme = 'theme-dark';
 const lightTheme = 'theme-light';
 
 localStorage.setItem('theme', 'theme-light');
+setTheme(lightTheme)
+
 
 var checkbox = document.querySelector("input[name=checkbox]");
 

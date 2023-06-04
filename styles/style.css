@@ -6,7 +6,17 @@ body {
     color: var(--theme-text);
 }
 
+.theme-light {
+    --theme-text: #121212;
+    --theme-background: #fff;
+    --td-color: #000000;
+}
 
+.theme-dark {
+    --theme-text: #fff;
+    --theme-background: #121212;
+    --td-color: #f5f5f8;
+}
 
 /* standard select styling */
 select {
@@ -25,7 +35,6 @@ select {
       position: relative; }
       .select-wrap:before {
         content: " ";
-        background: transparent url("../select-arrows.png") no-repeat 50% 50%;
         position: absolute;
         right: 0;
         top: 50%;
@@ -406,7 +415,7 @@ table {
 }
 
 td {
-    border: 1px solid #333333;
+    border: 1px solid var(--td-color);
     text-align: center;
     word-wrap: break-word;
     width: 50px;
