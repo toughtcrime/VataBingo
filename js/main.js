@@ -1,5 +1,4 @@
-console.log("You was hacked by USA Hibara Hacker Group")
-
+console.log("You was hacked by гос.деп шша");
 
 const takes = {
     "politician": [

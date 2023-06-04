@@ -5,13 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/style.css">
-
+        <link rel="stylesheet" href="./styles/theme-switcher.css">
+        <link rel="stylesheet" href="./styles/themes.css">
         <title>Cotton Bingo</title>
     </head>
     <body onload="setMode('random')" >
         <div class="header">
             <h1>ВАТНОЄ БІНГО</h1>
-            <select id="select_mode" class="bootstrap-select" style="align: left">
+            <label class="switch">
+                <input type="checkbox" id="theme-switch" name="checkbox">
+                <span class="slider round"></span>
+              </label>
+            <select id="select_mode" style="align: left">
                 <option value=""
                         disabled
                         selected>Select mode</option>
@@ -43,5 +48,6 @@
             </a>
         </h3>
         <script src="./js/main.js"></script>
+        <script src="./js/theme-switcher.js"></script>
     </body>
 </html>
