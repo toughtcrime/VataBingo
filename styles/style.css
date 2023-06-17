@@ -52,8 +52,7 @@ select {
   
 
 
-/* СТИЛИ ДЛЯ СЕЛЕКТА*/
-/*ТВОЯ ХУЙНЯ НЕ РОБОЧА, АНОН ПИЗДУЙ ФІКСИТИ*/
+
 select.bs-select-hidden,
 select.selectpicker {
     display: none !important;
