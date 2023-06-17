@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/theme-switcher.css">
+
+
+        <title>Cotton Bingo</title>
+    </head>
+    <body onload="setMode('random')" >
+        <div class="header">
+            <h1>Хібара БІНГО</h1>
+            <!--Theme Switcher Start-->
+            <label class="switch">
+                <input type="checkbox" id="theme-switch" name="checkbox">
+                <span class="slider round"></span>
+              </label>
+              <!--Theme Switcher End-->
+        </div>
+        <table id="bingo-table"></table>
+        <div id="modal-overlay" class="modal-overlay"></div>
+        <div id="winner-modal" class="winner-modal">
+            <h3 style="text-align: center;">У НАС ЕСТЬ ПОБЕДИТЕЛЬ</h3>
+            <div class="vatnik"></div>
+            <div class="buttons">
+                <button class="btn-1" onclick="reload()">Restart</button>
+                <button class="btn-2" onclick="hideModal()">Hide</button>
+            </div>
+        </div>
+        <h3>
+            Made by <a href="https://t.me/Gypsy_Jitsu_Chat">Gypsy Jitsu Community</a>
+        </h3>
+        <h3>
+            Find out more about Gypsy Jitsu on <a href="https://www.youtube.com/c/GypsyJitsu">Youtube</a>
+            or <a href="https://www.twitch.tv/gypsy_jitsu">Twitch</a>
+        </h3>
+        <h3>
+            <a href="https://t.me/Base_War_UA_RU">Информационное собрание</a>
+                сведений о войне РФ против Украины / <a href="https://t.me/Base_War_UA_RU">Information collection of facts</a>
+                about the war of the Russian Federation against Ukraine
+            </a>
+        </h3>
+        <script src="../js/hibara-engine.js"></script>
+        <script src="../js/theme-switcher.js"></script>
+    </body>
+</html>
