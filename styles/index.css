@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    overflow: hidden;
+}
+
+
+
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../images/fuckrussia.png');
+    z-index: -100;
+}
+
+.main-centered {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 100vh;
+}
+
+
+.bingos {
+    margin-top: 10px;
+}
+
+.bingo-warn {
+    color: #fff;
+}
+
+.bingo-item {
+    text-decoration: none;
+    color: #fff !important;
+    font-size: 29px;
+    font-weight: 700;
+    margin: 15px;
+    padding: 5px;
+    background-color: #0a16bd;
+}
+
+.bingo-item:hover {
+    background-color: #ddda07;
+    color: #000 !important;
+}
