@@ -49,6 +49,7 @@ body {
 }
 
 .bingo-item:hover {
+    transition: 0.3s;
     background-color: #ddda07;
     color: #000 !important;
 }
