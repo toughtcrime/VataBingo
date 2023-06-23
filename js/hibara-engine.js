@@ -82,6 +82,6 @@ function highlightCell() {
 
 shuffle(items);
 
-createTable(parseInt(items.length/columns), columns)
+createTable(parseInt(5), columns)
 fillTable();
 highlightCell()
