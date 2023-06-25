@@ -1,4 +1,4 @@
-console.log("Congrutulations! You was hacked by гос.деп pashalochka");
+console.log("Congrutulations! You was hacked by гос.деп Шешеа");
 
 
 
