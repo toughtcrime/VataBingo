@@ -54,6 +54,6 @@ function highlightCell() {
 
 shuffle(items);
 
-createTable(parseInt(5), columns)
+createTable(parseInt(6), columns)
 fillTable();
 highlightCell()
