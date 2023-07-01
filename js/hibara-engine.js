@@ -23,6 +23,8 @@ let items = [
             'Березка',
             'Дрова, нет отопления',
             'Реклама на хибаре, объявление о продаже хибары',
+            'Хибара с просевшим фундаментом'
+              
 ];
 let columns = 5;
 let table = document.getElementById('bingo-table');
