@@ -108,7 +108,7 @@ else
 {
     createTable(rows,columns);
     fillTable(HibaroTakes);
-    generateList();
+    generateList("Hibara");
     highlightCell();
 }
 
@@ -252,9 +252,18 @@ function checkWin(arr) {
         return 1
     }
 }
-function generateList()
+function generateList(whatToGenerate)
 {
-    let items = flatObject(takes);
+    let items;
+
+    if(whatToGenerate === "Hibara") {
+        items = HibaroTakes;
+    }
+
+    else {
+        items = flatObject(takes);
+    }
+    
     for(let i = 0; i < items.length; i++)
     {
         let item = document.createElement('li');
