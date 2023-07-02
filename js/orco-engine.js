@@ -97,7 +97,7 @@ let button = document.getElementById("showAllTakes");
 let listOL = document.getElementById("all-takes");
 var span = document.getElementsByClassName("close")[0];
 
-if(Object.is(select,null) != null)
+if(!Object.is(select,null))
 {
     select.addEventListener("change", (e)=>{
         setMode(select.value);
