@@ -6,7 +6,7 @@ setTheme(currentTheme);
 
 
 var checkbox = document.querySelector("input[name=checkbox]");
-
+checkbox.checked = currentTheme === darkTheme ? true : false;
 checkbox.addEventListener('change', function() {
     if (this.checked) {
         localStorage.setItem('theme', darkTheme);
