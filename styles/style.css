@@ -17,7 +17,9 @@ body {
     --theme-background: #121212;
     --td-color: #f5f5f8;
 }
-
+#showAllTakes {
+    color: var(--theme-text);
+}
 /* standard select styling */
 select {
     background-color: #fff;
@@ -516,4 +518,33 @@ button {
         font-weight: 0;
         font-size: calc(1em - 0.2em);
     }
+}
+.close-div {
+    float: right;
+}
+.modal {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    width: 500px;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.modal-content {
+    background-color: var(--theme-background);
+    color: var(--theme-text);
+    margin: auto;
+    padding: 20px;
+    height: auto;
+    border: 1px solid #888;
+    width: 80%;
+    cursor: pointer;
+}
+
+#all-takes {
+
 }

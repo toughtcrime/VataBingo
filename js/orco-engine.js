@@ -106,6 +106,7 @@ function shuffle(array) {
 }
 
 
+
 function createTable(rows, cols) {
     table.innerHTML = ("<tr>" + "<td class=\"bingo-cell\"></td>".repeat(cols) + "</tr>").repeat(rows);
 }

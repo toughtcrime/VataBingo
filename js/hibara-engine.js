@@ -32,6 +32,13 @@ const rows = 5;
 let table = document.getElementById('bingo-table');
 const modal = document.getElementById('winner-modal');
 const overlay = document.getElementById('modal-overlay');
+
+
+let takesModal = document.getElementById("takes-modal");
+let button = document.getElementById("showAllTakes");
+let listOL = document.getElementById("all-takes");
+var span = document.getElementsByClassName("close")[0];
+
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1)); 
@@ -48,6 +55,27 @@ function fillTable() {
         el.textContent = items[i];              
     }
 }
+
+
+function generateList()
+{
+    for(let i = 0; i < items.length; i++)
+    {
+        let item = document.createElement('li');
+        item.appendChild(document.createTextNode(items[i]));
+        listOL.append(item);
+    }
+}
+
+
+/* Modal window for showing  all sentences for game*/
+function showTakesModal() {
+    takesModal.style.display = "block";
+    span.onclick = function() {
+        takesModal.style.display = "none";
+    }
+}
+
 
 function highlightCell() {
     table.onclick = (event)=>{
@@ -136,8 +164,10 @@ function hideModal() {
     overlay.classList.remove('show');
 }
 
+
+generateList();
 shuffle(items);
 
 createTable(parseInt(5), columns)
 fillTable();
-highlightCell()
+highlightCell();
