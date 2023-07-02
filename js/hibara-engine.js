@@ -67,6 +67,11 @@ function generateList()
     }
 }
 
+function hideModal() {
+    modal.classList.remove('show');
+    overlay.classList.remove('show');
+}
+
 
 /* Modal window for showing  all sentences for game*/
 function showTakesModal() {
