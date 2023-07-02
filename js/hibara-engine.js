@@ -55,7 +55,9 @@ function fillTable() {
         el.textContent = items[i];              
     }
 }
-
+function reload() {
+    window.location.reload();
+}
 
 function generateList()
 {
