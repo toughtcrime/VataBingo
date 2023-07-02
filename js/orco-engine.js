@@ -50,7 +50,34 @@ const takes = {
         'НАТО',
     ]
 };
-
+let HibaroTakes = [
+    'Дючка',
+    'Свалка',
+    'Нет газа',
+    'Двухэтажная хибара',
+    'Деревянная надстройка/пристройка',
+    'Хибара мутант из разных материалов',
+    'Гаражный кооператив',
+    'Хибары на фоне церкви',
+    'Разъебаный асфальт',
+    'Трехэтажная и выше хибара',
+    'Огород рядом с многоквартирной хибарой',
+    'Спутниковая тарелка на хибаре',
+    'Иномарка рядом с хибарой',
+    'Деревянный гараж/сарай',
+    'Совковое название улицы',
+    'У вас так же" в чате',
+    'Курятник рядом с хибарой',
+    'Пластиковые окна',
+    'Аквафреш',
+    'Колонка для воды на улице',
+    'Аварийная, покосившаяся хибара',
+    'Березка',
+    'Дрова, нет отопления',
+    'Реклама на хибаре, объявление о продаже хибары',
+    'Хибара с просевшим фундаментом'
+      
+];
 
 function init() {
 
@@ -70,10 +97,21 @@ let button = document.getElementById("showAllTakes");
 let listOL = document.getElementById("all-takes");
 var span = document.getElementsByClassName("close")[0];
 
-select.addEventListener("change", (e)=>{
-    setMode(select.value);
-    
-})
+if(Object.is(select,null) != null)
+{
+    select.addEventListener("change", (e)=>{
+        setMode(select.value);
+    })
+}
+
+else 
+{
+    createTable(rows,columns);
+    fillTable(HibaroTakes);
+    generateList();
+    highlightCell();
+}
+
 
 function setMode(mode) {
     if (mode === 'unselected') {
@@ -87,9 +125,10 @@ function setMode(mode) {
         items = createCategories(takes);
     }
 
-
+    generateList();
+    highlightCell();
     createTable(rows, columns)
-    fillTable();
+    fillTable(items);
 }
 
 function createCategories(obj) {
@@ -117,11 +156,11 @@ function shuffle(array) {
 function createTable(rows, cols) {
     table.innerHTML = ("<tr>" + "<td class=\"bingo-cell\"></td>".repeat(cols) + "</tr>").repeat(rows);
 }
-function fillTable() {
+function fillTable(array) {
     let td = document.querySelectorAll('#bingo-table td');
     for (let i = 0; i < td.length; i++) {
         el = td[i];
-        el.textContent = items[i];
+        el.textContent = array[i];
     }
 }
 function highlightCell() {
@@ -232,5 +271,3 @@ function showTakesModal() {
     }
 }
 
-generateList();
-highlightCell();
