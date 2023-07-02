@@ -1,5 +1,5 @@
 let items = [
-       'Дючка',
+            'Дючка',
             'Свалка',
             'Нет газа',
             'Двухэтажная хибара',
@@ -26,8 +26,12 @@ let items = [
             'Хибара с просевшим фундаментом'
               
 ];
-let columns = 5;
+const columns = 5;
+const rows = 5;
+
 let table = document.getElementById('bingo-table');
+const modal = document.getElementById('winner-modal');
+const overlay = document.getElementById('modal-overlay');
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1)); 
@@ -44,12 +48,92 @@ function fillTable() {
         el.textContent = items[i];              
     }
 }
+
 function highlightCell() {
-    table.onclick = (event) => {
+    table.onclick = (event)=>{
         let target = event.target;
-        if (target.tagName != 'TD') return;
+        if (target.tagName != 'TD')
+            return;
         target.classList.toggle('checked');
+        if (checkWinCondition()) {
+            modal.classList.add('show');
+            overlay.classList.add('show');
+        }
     }
+}
+
+function checkWin(arr) {
+
+    let hWin = [];
+    arr.forEach(el=>{
+        if (el.classList.contains('checked')) {
+            hWin.push(el);
+        };
+    }
+    )
+    if (hWin.length === rows) {
+        return 1;
+    }
+}
+
+
+const getHorizontals = function() {
+    let hasWinCondition = 0;
+    const lines = table.querySelectorAll('tr');
+    let result = []
+    for (let i = 0; i < lines.length; i++) {
+        const horizontal = lines[i];
+        result = [...result, horizontal.childNodes];
+    }
+    return result;
+}
+
+const getVerticals = function() {
+    const result = [];
+    const lines = table.querySelectorAll('tr');
+    for (let i = 0; i < lines.length; i++) {
+        const horizontal = lines[i];
+        for (let j = 0; j < horizontal.childNodes.length; j++) {
+            if (result[j] === undefined) {
+                result[j] = [];
+            }
+            result[j][i] = lines[i].childNodes[j];
+        }
+    }
+    return result;
+}
+
+const getDiagonals = function() {
+    let result = [];
+    let reverseResult = [];
+    const lines = table.querySelectorAll('tr');
+    for (let i = 0; i < lines.length; i++) {
+        const horizontal = lines[i];
+        for (let j = 0; j < horizontal.childNodes.length; j++) {
+            if (i === j) {
+                result = [...result, lines[i].childNodes[j]];
+            }
+            if (i + j === 4) {
+                reverseResult = [...reverseResult, lines[i].childNodes[4 - i]]
+            }
+
+        }
+    }
+    return [result, reverseResult];
+}
+
+function checkWinCondition() {
+    const arr = [...getDiagonals(), ...getHorizontals(), ...getVerticals()];
+    const res = arr.map(set=>{
+        return checkWin(set);
+    }
+    )
+    return res.find(el=>el === 1);
+}
+
+function hideModal() {
+    modal.classList.remove('show');
+    overlay.classList.remove('show');
 }
 
 shuffle(items);

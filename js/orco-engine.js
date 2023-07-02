@@ -198,8 +198,7 @@ function checkWin(arr) {
     arr.forEach(el=>{
         if (el.classList.contains('checked')) {
             hWin.push(el);
-        }
-        ;
+        };
     }
     )
     if (hWin.length === rows) {
