@@ -140,6 +140,7 @@ function createCategories(obj) {
     return res;
 }
 
+
 function flatObject(obj) {
     return Object.keys(obj).reduce((acc, k) =>  [...acc, ...obj[k]], []);
 }
