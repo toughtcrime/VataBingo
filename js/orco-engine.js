@@ -79,40 +79,108 @@ let HibaroTakes = [
       
 ];
 
+let mobingoTakes = [
+    'Я не знал куда меня везут',
+    'Меня обманули/нас обманывают',
+    'Меня заставили',
+    'Бандеровцы, нацисты, фашисты',
+    'НАТО',
+    'США',
+    'Референдум',
+    'Я не стрелял (мяу-мяу)',
+    'Тут вам делать нечего',
+    'Мы пылинки, мы ничего не решаем',
+    'Я не голосовал или голосовал за Пыню',
+    'Чмобик собрал хибаробинго',
+    'Выглядит на 10 лет старше своего возраста',
+    '1+ ходка на зону',
+    'Государственный переворот',
+    'Защита Бамбаса',
+    'Мы же братья',
+    'Родственники за Пыню',
+    'Не знают кто напал',
+    'Виноваты оба',
+    'Не знает почему воюет',
+    'Пошел за деньги',
+    'Сидит с унылым ебалом',
+    'Виноват запад',
+    'Всей правды мы не знаем',
+    'Совколюб',
+    'Боится ФСБшников/представителей власти',
+    'Его никуда не отпускали, он сам ушел',
+    'Переобувается в воздухе',
+    'Родственники открестились от мальчика в трусиках'
+]
+
 function init() {
 
 }
-
+const titles = {
+    Hibara: "Hibara Bingo",
+    Orco: "Orco Bingo",
+    Mobingo: "Mobingo"
+};
 let items = createCategories(takes);
 const columns = 5;
 const rows = columns;
 const table = document.getElementById('bingo-table');
 const modal = document.getElementById('winner-modal');
 const overlay = document.getElementById('modal-overlay');
-const select = document.getElementById('select_mode');
-
 
 let takesModal = document.getElementById("takes-modal");
 let button = document.getElementById("showAllTakes");
 let listOL = document.getElementById("all-takes");
 var span = document.getElementsByClassName("close")[0];
 
-if(!Object.is(select,null))
+switch (document.title)
 {
-    select.addEventListener("change", (e)=>{
-        setMode(select.value);
-    })
+    case titles.Hibara:
+        generateHibaroBingo();
+    break;
+
+    case titles.Orco:
+        generateOrcoBingo();
+    break;
+
+    case titles.Mobingo:
+        generateMobingo();
+    break;
 }
 
-else 
+
+function generateOrcoBingo()
 {
-    createTable(rows,columns);
-    fillTable(HibaroTakes);
-    generateList("Hibara");
+    const select = document.getElementById('select_mode');
+    if(!Object.is(select,null))
+    {
+        select.addEventListener("change", (e)=> {
+            setMode(select.value);
+        })
+    }
+}
+
+function generateMobingo()
+{
+    let items = mobingoTakes;
+    generateList(titles.Mobingo);
     highlightCell();
+    createTable(rows, columns)
+    shuffle(items);
+    fillTable(items);
+}
+
+function generateHibaroBingo()
+{
+    let items = HibaroTakes;
+    generateList(titles.Hibara);
+    highlightCell();
+    createTable(rows, columns);
+    shuffle(items);
+    fillTable(items);
 }
 
 
+//Generating hibara bingo
 function setMode(mode) {
     if (mode === 'unselected') {
         return;
@@ -125,12 +193,15 @@ function setMode(mode) {
         items = createCategories(takes);
     }
 
-    generateList();
+    generateList(titles.Orco);
     highlightCell();
     createTable(rows, columns)
     fillTable(items);
+    shuffle(items);
 }
 
+
+//Creating categories from select
 function createCategories(obj) {
     const res = Object.keys(obj).reduce((acc, k) => {
         const arr = [...obj[k]];
@@ -146,10 +217,14 @@ function flatObject(obj) {
 }
 
 function shuffle(array) {
+    let arr = array;
+
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         [array[i],array[j]] = [array[j], array[i]];
     }
+
+    return arr;
 }
 
 
@@ -257,14 +332,21 @@ function generateList(whatToGenerate)
 {
     let items;
 
-    if(whatToGenerate === "Hibara") {
-        items = HibaroTakes;
+
+    switch(whatToGenerate)
+    {
+        case titles.Hibara:
+            items = HibaroTakes;
+        break;
+
+        case titles.Orco:
+            items = flatObject(takes);
+            break;
+        case titles.Mobingo:
+            items = mobingoTakes;
+            break;
     }
 
-    else {
-        items = flatObject(takes);
-    }
-    
     for(let i = 0; i < items.length; i++)
     {
         let item = document.createElement('li');
