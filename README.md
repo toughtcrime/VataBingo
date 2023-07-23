@@ -6,7 +6,7 @@ Customized bingo game with some changes of rules.
 **What the point of this Bingo and how to make it fun for you?**
 Let me explain to you why for it was created. If you're from Ukraine/Belarus/russia you can skip it and read next. 
 
-I need additionaly explain why it was created, because without explanation you will not undertand for what it was created:
+I need additionaly explain why it was created, because without explanation you will not understand for what it was created and why it can be fun:
 
 A lot of russians support and justify the war and killings regular civils, destroying building and making terrorist attacks in Ukraine, but at the same they name us as "brother nation". Their excuses are so formulaic, so we decided don't try to convince another point of view for russians, at least we can have fun from that. So that's why I decided to create this game.
 
