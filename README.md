@@ -81,7 +81,7 @@ In this bingo specified some hibara's signs of appearance of  which describes ho
 
 Meanwhile ukrainian soldiers defend Ukraine. Please, if you have some financial opportunity - you can support ukrainian soldiers.
 
-**[PayaloUA](t.me/payalo_community)** this man makes power banks, anti drone gun and drop system for drones. All reports is posted in his telegram channel. If you have 
+**[PayaloUA](t.me/payalo_community)** this man makes power banks, anti drone gun and drop system for drones. All reports is posted in his telegram channel.
 
 Here is contacts where you can support this ukrainian Jimmy Neutron 
 
