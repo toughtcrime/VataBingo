@@ -19,7 +19,7 @@ It depends from what you choose.
 
 Bingo consists of **Orco**, **Hibara**, **Mobi** - Bingos.
 
-Each bingo relies on one concept: gather facts, mark cells as green. Win condition is: gather 1 green diagonal or horizontal or vertical rows to win. The difference in each bingo is a sources and types of information. 
+Each bingo relies on one concept: gather facts, mark cells as green. Win condition is: gather 1 green diagonal or green rows/column to win. The difference in each bingo is a sources and types of information. 
 
 ### What is the Orco Bingo?
 Orco bingo intended to gather some formulaic answers from Russians(mostly, but it also possible from others braindead russian propaganda makers not only from russia), which justify the war in Ukraine.
