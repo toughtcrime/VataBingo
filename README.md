@@ -2,7 +2,6 @@
 # [Vata Bingo](https://toughtcrime.github.io/VataBingo/)
 
 Customized bingo game with some changes of rules. 
-
 **What the point of this Bingo and how to make it fun for you?**
 Let me explain to you why for it was created. If you're from Ukraine/Belarus/russia you can skip it and read next. 
 
@@ -77,7 +76,7 @@ In this bingo specified some hibara's signs of appearance of  which describes ho
 
 
 
-# Make right choice
+# Make a right choice
 
 Meanwhile ukrainian soldiers defend Ukraine. Please, if you have some financial opportunity - you can support ukrainian soldiers.
 
