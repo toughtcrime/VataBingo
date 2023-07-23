@@ -1,5 +1,5 @@
 
-# [Vata Bingo](https://toughtcrime.github.io/OrcoBingo/)
+# [Vata Bingo](https://toughtcrime.github.io/VataBingo/)
 
 Customized bingo game with some changes of rules. 
 
@@ -12,7 +12,7 @@ A lot of russians support and justify the war and killings regular civils, destr
 
 *Bingo currently translated in ru/ua languages, but in future I will translate to English and Polish.*
 Special thanks for Gipsy Jitsu for for using **Vata Bingo** in his streams, so I decided to make some examples from his streams **[Gypsi Jitsu](twitch.tv/Gypsy_jitsu/)**
-[Here](https://toughtcrime.github.io/OrcoBingo/) you can play Vata Bingo
+[Here](https://toughtcrime.github.io/VataBingo/) you can play Vata Bingo
 
 ## How to play from one of those?
 It depends from what you choose. 
