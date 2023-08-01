@@ -10,7 +10,7 @@ I need additionaly explain why it was created, because without explanation you w
 A lot of russians support and justify the war and killings regular civils, destroying building and making terrorist attacks in Ukraine, but at the same time they name ukrainians as "brother nation". Their excuses are so formulaic and typical, so we decided don't try to convince right point of view for russians, at least we can have fun from these failures of nature. So that's why I decided to create this game.
 
 *Bingo currently translated in ru/ua languages, but in future I will translate to English and Polish.*
-Special thanks for Gipsy Jitsu for for using **Vata Bingo** in his streams, so I decided to make some examples from his streams **[Gypsi Jitsu](twitch.tv/Gypsy_jitsu/)**
+Special thanks for Gipsy Jitsu for for using **Vata Bingo** in his streams, so I decided to make some examples from his streams [Gypsi Jitsu](twitch.tv/Gypsy_jitsu/)
 [Here](https://toughtcrime.github.io/VataBingo/) you can play Vata Bingo
 
 ## How to play from one of those?
