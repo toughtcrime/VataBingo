@@ -82,7 +82,7 @@ Meanwhile ukrainian soldiers defend Ukraine. Please, if you have some financial 
 
 **[PayaloUA](https://t.me/payalo_community)** this man makes power banks, anti drone gun and drop system for drones. All reports is posted in his telegram channel.
 
-Here is contacts where you can support this ukrainian Jimmy Neutron 
+Here are contacts where you can support this ukrainian Jimmy Neutron 
 
 **Privat Bank**: *5168 7422 4327 5595*
 
